@@ -6,6 +6,191 @@
     android:layout_height="match_parent"
     tools:context=".SignIn">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+    <TextView
+        android:id="@+id/alreadyTxt"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/Already"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <!--<RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/people_pic_img"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dance7"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>-->
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/guideline1"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:id="@+id/emailTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/emailedt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailTxt"
+            android:layout_marginTop="8dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"/>
+
+        <TextView
+            android:id="@+id/pswTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailedt"
+            android:layout_marginTop="10dp"
+            android:text="@string/password"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/pswedt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pswTxt"
+            android:layout_marginTop="8dp"
+            android:hint="Password"
+            android:inputType="textPassword"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_btn_bg"
+        android:text="Login"
+        android:textColor="#ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relative1"
+        android:layout_marginTop="38dp"/>
+
+    <TextView
+        android:id="@+id/newUserTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/newuser"
+        android:textColor="#266E63"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginBtn" />
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="60dp"
+        android:background="#000000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newUserTxt" />
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="60dp"
+        android:background="#000000"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newUserTxt" />
+
+    <TextView
+        android:id="@+id/useOtherTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/useother"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newUserTxt" />
+
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/useOtherTxt"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            android:id="@+id/facebookImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_facebook" />
+
+        <ImageView
+            android:id="@+id/googleImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_google_plus"
+            android:layout_toEndOf="@id/facebookImg"
+            android:layout_marginStart="10dp"/>
+
+    </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="11dp"
+        android:layout_height="match_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_side_bg"
+        android:layout_marginTop="20dp"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

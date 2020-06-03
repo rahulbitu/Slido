@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Slido</string>
+
+
+    <!--Login text-->
+    <string name="Already">Already have an account?</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="newuser">New user? Register Now</string>
+    <string name="useother">Use other Methods</string>
+
 </resources>
